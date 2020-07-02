@@ -1,8 +1,10 @@
 # Unit 11 Employee Template Engine
  Unit 11 HW
  
-[![Name of Label](https://img.shields.io/badge/Javascript-JS-blue.svg)](https://www.w3schools.com/Js/)
-[![Name of Label](https://img.shields.io/badge/Node.js-Node-green.svg)](https://nodejs.org/en/)
+[![Javascript](https://img.shields.io/badge/Javascript-JS-blue.svg)](https://www.w3schools.com/Js/)
+[![Node.js](https://img.shields.io/badge/Node.js-Node-green.svg)](https://nodejs.org/en/)
+[![Express](https://img.shields.io/badge/Express-Express-red.svg)](https://nodejs.org/en/)
+[![Heroku](https://img.shields.io/badge/Heroku-Heroku-pink.svg)](https://nodejs.org/en/)
 
 
 ## Summary
