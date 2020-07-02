@@ -17,3 +17,5 @@ require('./routes/htmlRoute')(app);
 app.listen(PORT, () => {
 	console.log('SERVER IS RUNNING ON PORT:' + PORT);
 });
+
+//Sucessfully console logging server is running on port 8080
