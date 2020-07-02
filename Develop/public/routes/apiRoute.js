@@ -4,7 +4,7 @@ const data = require('../db/db.json');
 
 // Routing
 module.exports = (app) => {
-	// API GET routes
+	// API get
 	app.get('/api/notes', (request, result) => {
 		fs.readFile('./db/db.json', 'utf-8', (err, notes) => {
 			if (err) throw err;

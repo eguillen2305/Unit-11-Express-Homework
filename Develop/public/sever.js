@@ -1,4 +1,4 @@
-//START OF SERVER.JS
+//dependencies
 const express = require('express');
 const htmlRoutes = require('./routes/htmlRoute');
 //const app used to setup Express
