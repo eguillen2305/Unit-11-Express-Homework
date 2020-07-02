@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-
+//routes going to the correct route files.
 require('./routes/apiRoute')(app);
 require('./routes/htmlRoute')(app);
 
