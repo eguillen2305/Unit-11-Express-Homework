@@ -16,6 +16,30 @@ module.exports = (app) => {
 			}
 			result.json(notesParsed);
 		});
+    });
+    
+    	//APP.POST api notes
+	app.post('./api/notes', (request, result) => {
+		console.log(data, 'Adding New Note', request.body);
+		// Read from the JSON file
+		fs.readFile('./db/db.json', 'utf-8', (err, response) => {
+			// Convert to JSON
+			let allNotes = JSON.parse(response);
+
+			var newestNote = allNotes[allNotes.length - 1].id;
+			newestNote = newestNote + 1;
+			console.log(newestNote);
+
+			const newNote = { ...req.body, id: latestNote };
+			console.log('New Note: ', newNote);
+			allNotes.push(newNote);
+			// Updates the new note added
+			fs.writeFile('./db/db.json', JSON.stringify(allNotes), (err) => {
+				if (err) throw err;
+				result.json(allNotes);
+				console.log('New note has been added: ', allNotes);
+			});
+		});
 	});
 
 	app.delete('/api/notes/:id', (request, result) => {
@@ -29,32 +53,10 @@ module.exports = (app) => {
 			fs.writeFile('./db/db.json', JSON.stringify(newNotes, null, 2), (err) => {
 				if (err) throw err;
 				result.json(true);
-				console.log('Notes deleted!');
+				console.log('Notes deleted');
 			});
 		});
 	});
 
-	//APP.POST api notes
-	app.post('./api/notes', (request, result) => {
-		console.log(data, 'Adding New Note', request.body);
-		// Read from the JSON file
-		fs.readFile('./db/db.json', 'utf-8', (err, response) => {
-			// Convert to JSON
-			let allNotes = JSON.parse(response);
 
-			var latestNote = allNotes[allNotes.length - 1].id;
-			latestNote = latestNote + 1;
-			console.log(latestNote);
-
-			const newNote = { ...req.body, id: latestNote };
-			console.log('New Note: ', newNote);
-			allNotes.push(newNote);
-			// Updates the new note added
-			fs.writeFile('./db/db.json', JSON.stringify(allNotes), (err) => {
-				if (err) throw err;
-				result.json(allNotes);
-				console.log('New note has been added: ', allNotes);
-			});
-		});
-	});
 };
