@@ -1,7 +1,7 @@
 //Dependencies
 const fs = require('fs');
-const data = require('../db/db.json');
-
+// const data = require('../db/db.json');
+const path = require('path');
 // Routing
 module.exports = (app) => {
 	// API get
