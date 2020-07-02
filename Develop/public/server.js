@@ -1,6 +1,7 @@
 //dependencies
 const express = require('express');
-const htmlRoutes = require('./routes/htmlRoute');
+const htmlRoute = require('./routes/htmlRoute');
+const apiRoute = require('./routes/apiRoute');
 //const app used to setup Express
 const app = express();
 const PORT = process.env.PORT || 8080;
