@@ -1,21 +1,19 @@
 //START OF SERVER.JS
 const express = require('express');
-const htmlRoutes = require('./routes/htmlRoutes');
+const htmlRoutes = require('./routes/htmlRoute');
+//const app used to setup Express
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+//app.use statments used to parse the data. JSON, URLENCODED, STATIC.
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static('public'));
 
+require('./routes/apiRoute')(app);
+require('./routes/htmlRoute')(app);
 
-
-
-
-
-app.listen(PORT, function() {
-	console.log(`SERVER IS RUNNING ON PORT: ${PORT}`);
+//APP.LISTEN to start server and console log when port is accessed.
+app.listen(PORT, () => {
+	console.log('SERVER IS RUNNING ON PORT:' + PORT);
 });
-
-
-
