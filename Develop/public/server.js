@@ -2,6 +2,7 @@
 const express = require('express');
 const htmlRoute = require('./routes/htmlRoute');
 const apiRoute = require('./routes/apiRoute');
+const path = require('path');
 //const app used to setup Express
 const app = express();
 const PORT = process.env.PORT || 8080;
