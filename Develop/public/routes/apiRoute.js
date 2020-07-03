@@ -16,9 +16,9 @@ module.exports = (app) => {
 			}
 			result.json(notesParsed);
 		});
-    });
-    
-    	//APP.POST api notes
+	});
+
+	//APP.POST api notes
 	app.post('./api/notes', (request, result) => {
 		console.log(data, 'Adding New Note', request.body);
 		// Read from the JSON file
@@ -57,6 +57,4 @@ module.exports = (app) => {
 			});
 		});
 	});
-
-
 };
