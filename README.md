@@ -9,10 +9,9 @@
 
 ## Summary
 
-Software engineering team generator command line application. The application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. This assignment must also pass all unit tests. When the user has completed building the team, the application will create an HTML file that displays a nicely formatted team roster based on the information provided by the user.
+Note taking application using express backend to post to front end html. Unit 11 Homework assignment. 
 
 
-![GIF DEMO](README-DEMO.gif)
 
 ## How to use the Application
 
@@ -20,9 +19,7 @@ Software engineering team generator command line application. The application wi
 1. first clone the application to your local file
 `git clone`
 2. install the packages with npm `npm install`
-3. run the server with `node app.js`
-4. Answer the prompts
-5. The template will be then create a file called "team.html" in the output folder. 
+3. run the server with `node server.js`
 
 ## Technology Used
  ![](http://williamavasquez.herokuapp.com/img/js.png)
