@@ -1,15 +1,18 @@
 {
-  "name": "note-taker",
-  "version": "1.0.0",
-  "main": "server.js",
-  "description": "Unit 11 homework assignment",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4"
-  },
+	"name": "note-taker",
+	"version": "1.0.0",
+	"description": "Saves notes in a json file",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server"
+	},
+	"author": "Armando Rodriguez",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/eguillen2305/Unit-11-Express-Homework.git"
+	}
 }
