@@ -4,9 +4,9 @@
 	"description": "Saves notes in a json file",
 	"main": "server.js",
 	"scripts": {
-		"start": "node server"
+		"start": "./Develop/public/node server.js"
 	},
-	"author": "Armando Rodriguez",
+	"author": "Eduardo Guillen",
 	"license": "ISC",
 	"dependencies": {
 		"express": "^4.17.1"

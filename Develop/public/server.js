@@ -10,7 +10,8 @@ const PORT = process.env.PORT || 8080;
 //app.use statments used to parse the data. JSON, URLENCODED, STATIC.
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+// app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'routes')));
 //routes going to the correct route files.
 require('./routes/apiRoute')(app);
 require('./routes/htmlRoute')(app);
