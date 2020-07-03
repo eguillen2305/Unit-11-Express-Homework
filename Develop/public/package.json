@@ -4,7 +4,7 @@
 	"description": "Saves notes in a json file",
 	"main": "server.js",
 	"scripts": {
-		"start": "./Develop/public/node server.js"
+		"start": "node server.js"
 	},
 	"author": "Eduardo Guillen",
 	"license": "ISC",

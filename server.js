@@ -1,7 +1,7 @@
 //dependencies
 const express = require('express');
-const htmlRoute = require('./routes/htmlRoute');
-const apiRoute = require('./routes/apiRoute');
+const htmlRoute = require('./Develop/public/routes/htmlRoute');
+const apiRoute = require('./Develop/public/routes/apiRoute');
 const path = require('path');
 //const app used to setup Express
 const app = express();
@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'routes')));
 //routes going to the correct route files.
-require('./routes/apiRoute')(app);
-require('./routes/htmlRoute')(app);
+require('./Develop/public/routes/apiRoute')(app);
+require('./Develop/public/routes/htmlRoute')(app);
 
 //APP.LISTEN to start server and console log when port is accessed.
 app.listen(PORT, () => {
